@@ -1,8 +1,11 @@
 import React from 'react';
+import IngredientsList from './IngredientsList';
+import IngredientsSummary from './IngredientsSummary';
 
 const DashboardPage = () => (
     <div>
-        Dashboardpage content
+        <IngredientsSummary />
+        <IngredientsList />
     </div>
 );
 
