@@ -10,23 +10,17 @@ export class RecipesPage extends React.Component{
         const recipes = this.props.recipes;
         console.log(recipes);
         
-        
         return (
             <div className='main-content'>
                 <div className='page-header'>
                     <div className='content-container'>
-                        {recipes.length !== 0 ? <Link className='button button--back' to='/dashboard' >Back to the pantry</Link>: null}
+                        {recipes.length === 0 ? <p className='error-tag'>No recipes found, change ingredients!</p>:<Link className='button button--back' to='/dashboard' >Back to the pantry</Link>}
                         <div className='cards__keeper'>
                             { 
-                                recipes.length === 0 ? (
-                                    <div className='list-item list-item--message'>
-                                        <span className='error-tag'>No recipes found, change ingredients!</span>
-                                    </div>
-                                ) : (
+                                recipes.length !== 0 ? 
                                     recipes.map((recipeItem, index)=>{
                                         return <RecipeItem key={index} label={recipeItem.recipe.label} url={recipeItem.recipe.url} ingredients={recipeItem.recipe.ingredientLines} image={recipeItem.recipe.image} />;
-                                    })
-                                )
+                                    }) : null
                             } 
                         </div>
                     </div>

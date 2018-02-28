@@ -27,7 +27,7 @@
     text-decoration: none;
     transition: background .3s ease;
     &:hover {
-        background: $off-white;
+        background: darken($off-white, 20%);
     }
 
     @media (min-width: $desktop-breakpoint) {
@@ -49,7 +49,8 @@
     color: $grey;
     padding: $m-size;
     &:hover {
-        background: none;
+        color: white;
+        background-color: red;
     }
 }
 

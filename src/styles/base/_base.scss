@@ -7,11 +7,10 @@ html {
 
 body {
     color: $dark-grey;
+    background-color: black;
     font-family: 'Open Sans', Helvetica, sans-serif;
     font-size: $m-size;
-    line-height: 1.6;
-    background: url('/background-1932466_1280.jpg');
-    background-size: cover;
+    line-height: 1.6; 
 }
 
 button {
@@ -33,6 +32,9 @@ a {
 }
 .main-content{
     min-height: calc(100vh - 122px);
+    background: url('/background-1932466_1280.jpg');
+    background-size: cover;
+    padding-bottom: 40px;
 }
 .error-tag {
     font-style: italic;
