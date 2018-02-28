@@ -18,7 +18,7 @@ export class IngredientsSummary extends React.Component {
                         {this.props.ingredients.length===0 ? (<p className='error-tag'>No ingredients, nothing to cook, sorry</p>):(
                         <div>
                                 <Link className='button' to='/recipes' onClick={this.onClick}>Start Recipe Search</Link>
-                                <p>When you're ready, search for a recipe</p>
+                                <p>Search for a recipe</p>
                         </div>  
                         )}
                         { this.props.recipes.length!==0?<Link className='button button--back' to='/recipes'>Back to recipes</Link>: null}
