@@ -7,9 +7,11 @@ html {
 
 body {
     color: $dark-grey;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', Helvetica, sans-serif;
     font-size: $m-size;
     line-height: 1.6;
+    background: url('/background-1932466_1280.jpg');
+    background-size: cover;
 }
 
 button {
@@ -21,4 +23,20 @@ button:disabled {
 }
 .is-active {
     font-weight: bold;
+}
+a {
+    text-decoration: none;
+}
+#edamam-badge {
+    width: 100%;
+    background-color: white;
+}
+.main-content{
+    min-height: calc(100vh - 122px);
+}
+.error-tag {
+    font-style: italic;
+    color: red;
+    font-size: 22px;
+    text-align: center;
 }

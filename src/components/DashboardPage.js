@@ -3,12 +3,11 @@ import IngredientsList from './IngredientsList';
 import IngredientsSummary from './IngredientsSummary';
 
 const DashboardPage = () => (
-    <div>
+    <div className='main-content'>
         <IngredientsSummary />
         <IngredientsList />
     </div>
 );
-
 
 
 export default DashboardPage;

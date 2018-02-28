@@ -5,7 +5,6 @@ import IngredientsListItem from './IngredientsListItem';
 export const IngredientsList = (props) => (
     
     <div className='content-container'>
-        {console.log(props)}
         <div className='list-header'>
             <div className='show-for-mobile'>Ingredients</div>
             <div className='show-for-desktop'>Ingredient</div>

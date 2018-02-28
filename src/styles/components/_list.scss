@@ -1,7 +1,9 @@
 .list-header {
-    background: $off-white;
+    background-color: $dark-blue;
     border: 1px solid darken($off-white, 7%);
-    color: $grey;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
     display: flex;
     justify-content: space-between;
     padding: $s-size $m-size;
@@ -16,6 +18,7 @@
 
 .list-item {
     border: 1px solid darken($off-white, 7%);
+    background: white;
     border-top: none;
     color: $dark-grey;
     display: flex;
