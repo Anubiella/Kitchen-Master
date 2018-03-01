@@ -5,7 +5,32 @@ import RecipeItem from './RecipeItem';
 
 
 export class RecipesPage extends React.Component{
-    
+    constructor(props) {
+        super(props);
+        this.handleScroll = this.handleScroll.bind(this);
+      }
+      
+      componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
+      };
+      
+      componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+      };
+      
+    handleScroll(event) {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    };
+
+    topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    };
+
     render() {
         const recipes = this.props.recipes;
         console.log(recipes);
@@ -22,6 +47,7 @@ export class RecipesPage extends React.Component{
                                         return <RecipeItem key={index} label={recipeItem.recipe.label} url={recipeItem.recipe.url} ingredients={recipeItem.recipe.ingredientLines} image={recipeItem.recipe.image} />;
                                     }) : null
                             } 
+                            <button onClick={this.topFunction} id="myBtn" title="Go to top">Top</button>
                         </div>
                     </div>
                 </div> 

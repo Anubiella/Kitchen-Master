@@ -21,8 +21,8 @@ export default class IngredientForm extends React.Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-        if (!this.state.name) {
-            const error = 'Please enter the name';
+        if (!this.state.name || this.state.name.trim()==='') {
+            const error = 'Please enter a valid ingredient name';
             this.setState(()=>({error: error}));
         } else {
             this.props.onSubmit({
@@ -35,11 +35,11 @@ export default class IngredientForm extends React.Component {
     render() {
         return (
                 <form className='form' onSubmit={this.onSubmit}>
-                    {this.state.error && <p className='form__error'>{this.state.error}</p>}
+                    {this.state.error && ( <p className='form__error'>{this.state.error}</p>)}
                     <input className='text-input' type='text' placeholder='Ingredient name' 
                             autoFocus value={this.state.name} onChange={this.onNameChange}/>
                     <div>
-                         <button className='button'>Add expense</button>
+                         <button className='button'>Add Ingredient</button>
                     </div>
                 </form>
         );

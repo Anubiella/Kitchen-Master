@@ -7,6 +7,12 @@
 }
 
 .form__error {
+    padding: $m-size;
+    background-color: #ffdddd;
+    border-left: 6px solid #f44336;
+    border-right: 6px solid #f44336;
     margin: 0 0 $m-size 0;
     font-style: italic;
+    font-weight: bold;
+    text-align: center;
 }
